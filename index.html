@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-glyphicons.min.css">
+        <link rel="icon" href="assets/image/icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class="wrapper">
+
+            <header>
+                <img class="logo top" src="assets/image/Masteralb.com%20TOP%20LOGO.png">
+            </header>
+
+            <section>
+
+                <div class="col-2">
+                    <div class="form-register">
+                        <h2>Register Form</h2>
+                        <form action="thanks.html" method="get">
+                            <fieldset>
+                                <div class="input"> <i class="glyphicon glyphicon-user"></i> <input type="text" name="username" placeholder="Username" minlength="3"></div>
+                                <div class="input"> <i class="glyphicon glyphicon-lock"></i> <input type="password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number." required> </div>
+                                <div class="input"> <i class="glyphicon glyphicon-lock"></i> <input type="password" name="confirm" placeholder="Confirm Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please repeat password." required></div>
+                                <div class="input"> <i class="glyphicon glyphicon-envelope"></i><input type="email"  placeholder="Email" title="The E-mail is a missing a @." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$"></div>
+                                <div class="input"> <i class="glyphicon glyphicon-map-marker"></i>
+                                    <select>
+                                       <option name="location" value="Your Location" selected>Your Location</option>
+                                       <option name="city" value="Your City">Your City</option>
+                                    </select>
+                                </div>
+                                <div class="checkbox">
+                                    <div class="squaredOne">
+                                        <input type="checkbox" value="None" id="squaredOne" name="check" checked />
+                                        <label for="squaredOne"></label>
+                                    </div>
+                                    <p>I have read and accept the terms of use.</p>
+                                </div>
+                                <input type="submit" value="Sing up">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="form-email">
+                        <h2>Send Email</h2>
+                        <form action="thanks.html" method="get">
+                            <fieldset>
+                                <div class="input"> <i class="glyphicon glyphicon-user"></i> <input type="text" name="name"  minlength="3"  placeholder="Your Name"></div>
+                                <div class="input"> <i class="glyphicon glyphicon-envelope"></i> <input type="email" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" name="email" placeholder="Your Email" required></div>
+
+                                 <div class=""><textarea name="message" required>Type your massage...</textarea>
+                                 </div>
+                                <div class="checkbox">
+                                    <div class="squaredTwo">
+                                        <input type="checkbox" value="None" id="squaredTwo" name="check" checked />
+                                        <label for="squaredTwo"></label>
+                                    </div>
+                                    <p>Send a copy to my Email</p>
+                                </div>
+                                <input type="submit" name="submit" value="Send Email">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="form-sign-in">
+                        <h2>Sign in Form</h2>
+                        <form action="thanks.html" method="get">
+                            <fieldset>
+                                <div class="input"> <i class="glyphicon glyphicon-user"></i> <input type="text" name="username"  minlength="3" placeholder="Username"></div>
+                                <div class="input"> <i class="glyphicon glyphicon-lock"></i> <input type="password" name="password" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" placeholder="Password"></div>
+                                <div class="checkbox">
+                                    <div class="squaredThree">
+                                        <input type="checkbox" value="None" id="squaredThree" name="check" checked />
+                                        <label for="squaredThree"></label>
+                                    </div>
+                                    <p>Remember me</p>
+                                </div>
+                                <input type="submit" name="submit" value="Sing in">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="form-recovery">
+                        <h2>Recovery Form</h2>
+                        <form action="thanks.html" method="get">
+
+                            <fieldset>
+                                <div class="input"> <i class="glyphicon glyphicon-envelope"></i> <input type="emal" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" name="email" placeholder="Enter your Email"></div>
+                                <div class="input"> <i class="glyphicon glyphicon-phone"></i> <input type="number" step="any" pattern="[-+]?[0-9]*[.,]?[0-9]+" placeholder="Enter your Phone number"></div>
+                                <input class="btn" type="submit" name="submit" value="Send">
+                                <input id="noneactive" class="btn-right" type="submit" name="submit" value="Done" disabled="disabled">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="form-subscribe">
+                        <h2>Subscribe Form</h2>
+                        <form action="thanks.html" method="get">
+
+                            <fieldset>
+                                <div class="input"> <i class="glyphicon glyphicon-envelope"></i> <input type="emal" name="email" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" placeholder="Enter your Email"></div>
+                                <input class="btn" type="submit" name="submit" value="Subscribe">
+                                <input id="red" class="btn-right" type="submit" name="submit" value="No, Thanks" disabled="disabled">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="logo-bottom">
+                        <img class="logo bottom" src="assets/image/Masteralb.com%20LOGO.png">
+                    </div>
+                </div>
+                
+            </section>
+
+        </div>
+
+    </body>
+
+</html>

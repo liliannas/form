@@ -1,0 +1,734 @@
+/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
+
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+main,
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+    display: block;
+}
+
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+
+/* Responsive images and other embedded objects */
+
+
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+
+img,
+object,
+embed {
+    max-width: 100%;
+}
+
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+
+
+/* force a vertical scrollbar to prevent a jumpy page */
+
+html {
+    overflow-y: scroll;
+}
+
+
+/* we use a lot of ULs that aren't bulleted.
+	you'll have to restore the bullets within content,
+	which is fine because they're probably customized anyway */
+
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+
+/* tables still need cellspacing="0" in the markup */
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th {
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+td {
+    font-weight: normal;
+    vertical-align: top;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+pre {
+    white-space: pre;
+    /* CSS2 */
+    white-space: pre-wrap;
+    /* CSS 2.1 */
+    white-space: pre-line;
+    /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word;
+    /* IE */
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+    vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+    vertical-align: baseline;
+}
+
+.ie6 input {
+    vertical-align: text-bottom;
+}
+
+select,
+input,
+textarea {
+    font: 99% sans-serif;
+}
+
+table {
+    font-size: inherit;
+    font: 100%;
+}
+
+small {
+    font-size: 85%;
+}
+
+strong {
+    font-weight: bold;
+}
+
+td,
+td img {
+    vertical-align: top;
+}
+
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+
+/* standardize any monospaced elements */
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, sans-serif;
+}
+
+
+/* hand cursor on clickable elements */
+
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+    cursor: pointer;
+}
+
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+}
+
+
+/* make buttons play nice in IE */
+
+button,
+input[type=button] {
+    width: auto;
+    overflow: visible;
+}
+
+
+/* scale images in IE7 more attractively */
+
+.ie7 img {
+    -ms-interpolation-mode: bicubic;
+}
+
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+
+
+/* let's clear some floats */
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+body {
+    font: 13px Helmet, Freesans, sans-serif;
+}
+
+
+/* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
+
+
+/* We like off-black for text. */
+
+body,
+select,
+input,
+textarea {
+    color: #333;
+}
+
+a {
+    color: #03f;
+}
+
+a:hover {
+    color: #69f;
+}
+
+
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+
+::-moz-selection {
+    background: #fcd700;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #fcd700;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+/*	j.mp/webkit-tap-highlight-color */
+
+a:link {
+    -webkit-tap-highlight-color: #fcd700;
+}
+
+ins {
+    background-color: #fcd700;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background-color: #fcd700;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* Mozilla dosen't style placeholders by default */
+
+input:-moz-placeholder {
+    color: #a9a9a9;
+}
+
+textarea:-moz-placeholder {
+    color: #a9a9a9;
+}
+
+
+/* let's give blockquotes *some* default styling, because unstyled blockquotes are dangerous */
+
+blockquote {
+    padding: 16px;
+    background: #eee;
+}
+
+
+/**********************************************************************************************************************************xs mediaqueries, */
+body{
+    background-image: url("../image/background.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    height: 1400px;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 56px 0 0 0;
+}
+
+.logo {
+    opacity: .5;
+}
+
+.top {
+    height: 112px;
+    width: 438px;
+}
+
+.bottom{
+    padding-top: 45px;
+    opacity: .2;
+ 
+}
+
+.logo-bottom{
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 25px;
+    font-size: 32px;
+    color: #fff;
+}
+
+.col-2 {
+    width: 50%;
+    float: left;
+}
+
+
+form {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.23);
+    padding: 20px;
+    max-width: 420px;
+    margin: auto;
+}
+
+fieldset {
+    background-color: #fff;
+    padding: 0px 25px 3px 25px;
+    border-radius: 3px;
+}
+
+.input{
+    margin: 20px 0;
+    padding: 13px 0;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(198, 198, 198);
+    border-radius: 3px;
+    content: '\e105';
+}
+
+.glyphicon{
+    color: rgb(198, 198, 198);
+    border-right: 1px solid rgb(198, 198, 198);
+    width: 59px;
+    text-align: center;
+}
+
+input,
+select,
+::placeholder {
+    margin-top: -3px;
+    border:none;
+    font-size: 16px;
+    padding-left: 10px;
+    outline: none;
+    width: 80%;
+    color: rgb(198, 198, 198);
+}
+
+
+input:focus::-webkit-input-placeholder {
+    color:transparent; 
+}
+
+input:focus:-moz-placeholder { 
+    color:transparent; 
+} /* FF 4-18 */
+
+input:focus::-moz-placeholder { 
+    color:transparent; 
+} /* FF 19+ */
+
+input:focus:-ms-input-placeholder { 
+    color:transparent;
+}
+
+input[type=submit] {
+    outline: none;
+    margin: 10px 0;
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(59, 154, 0);
+    border-radius: 3px;
+    text-shadow: 2px 2px rgb(59, 154, 0);
+    background-image: -moz-linear-gradient( 90deg, rgb(129, 197, 33) 20%, rgb(155, 207, 42) 80%);
+    background-image: -webkit-linear-gradient( 90deg,  rgb(129, 197, 33) 20%, rgb(155, 207, 42) 80%);
+    background-image: -ms-linear-gradient( 90deg,  rgb(129, 197, 33) 20%, rgb(155, 207, 42) 80%);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.41);
+}
+
+
+textarea {
+    height: 234px;
+    width: 100%;
+    padding: 13px 0 0 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: rgb(198, 198, 198);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(198, 198, 198);
+    border-radius: 3px;
+    content: '\e105';
+}
+
+
+/* focus active i hover*/
+input[type=submit]:hover{
+    background-image: -moz-linear-gradient( 90deg, rgb(129, 197, 33) 100%, rgb(155, 207, 42) 0%);
+    background-image: -webkit-linear-gradient( 90deg,  rgb(129, 197, 33) 100%, rgb(155, 207, 42) 0%);
+    background-image: -ms-linear-gradient( 90deg,  rgb(129, 197, 33) 100%, rgb(155, 207, 42) 0%);
+}
+
+.input:hover, textarea:hover{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(129, 197, 33, 0.8);
+    outline: none;
+}
+
+.input:focus-within, textarea:focus {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(59, 154, 0, 0.8);
+    outline: none;
+}
+
+/*checkbox*/
+.squaredOne, .squaredTwo, .squaredThree {
+    float: left;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    position: relative;    
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(198, 198, 198);
+    border-radius: 3px;
+}
+
+.squaredOne label, .squaredTwo label, .squaredThree label {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(198, 198, 198);
+    border-radius: 3px;
+}
+.squaredOne label:after, .squaredTwo label:after, .squaredThree label:after{
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background: rgb(129, 197, 33) ;
+  border-radius: 3px;
+  opacity: 0;
+}
+.squaredOne label:hover::after, .squaredTwo label:hover::after, .squaredThree label:hover::after  {
+  opacity: 0.3;
+}
+.squaredOne input[type="checkbox"], .squaredTwo input[type="checkbox"], .squaredThree input[type="checkbox"] {
+  visibility: hidden;
+}
+.squaredOne input[type="checkbox"]:checked + label:after, .squaredTwo input[type="checkbox"]:checked + label:after, .squaredThree input[type="checkbox"]:checked + label:after  {
+  opacity: 1;
+}
+
+
+p {
+    padding-top: 4px;
+    font-size: 16px;
+    color: rgb(198, 198, 198);
+}
+
+.btn {
+    max-width: 145px!important;
+    float: left;
+    height: 40px;
+    font-size: 18px!important;
+}
+
+.btn-right {
+    max-width: 145px!important;
+    float: right;
+    height: 40px;
+    font-size: 18px!important;
+}
+
+#noneactive {
+    border-color: rgb(144, 202, 109);
+    text-shadow: 2px 2px rgb(144, 202, 109);
+    background-image: -moz-linear-gradient( 90deg, rgb(172, 209, 130) 100%, rgb(196, 224, 163) 0%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(172, 209, 130) 100%,  rgb(196, 224, 163) 0%);
+    background-image: -ms-linear-gradient( 90deg, rgb(172, 209, 130) 100%, rgb(196, 224, 163) 0%);
+}
+
+#red {
+    border-color: rgb(162, 32, 42);
+    text-shadow: 2px 2px rgb(78, 38, 5);
+    background-image: -moz-linear-gradient( 90deg, rgb(243, 70, 88) 100%, rgb(245, 93, 110) 0%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(243, 70, 88) 100%, rgb(245, 93, 110) 0%);
+    background-image: -ms-linear-gradient( 90deg, rgb(243, 70, 88) 100%, rgb(245, 93, 110) 0%);
+}
+
+
+/* Media queries
+-------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 905px) {
+    .col-2 {
+        width: 100%;
+        padding: 0 50px;
+        margin: auto 0;
+    }
+    .bottom{
+        margin:45px 0;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .top, .bottom{
+        width: 100%;
+        height: auto;
+        padding: 0 5%;
+    }
+    .btn, .btn-right{
+    max-width: 115px!important;
+    }
+    .glyphicon{
+    width: 39px;
+    }
+    input[type=text],select {
+        padding-left: 0px;
+
+    }
+    select, ::placeholder{
+        font-size: 0.9em;
+    }
+}
+
+
+/* Print styles
+-------------------------------------------------------------------------------*/
+
+@media print {}
+
+/*Thanks page
+-------------------------------------------------------------------------------*/
+.thanks{
+    height: 100vh;
+    padding-top: 10vh;
+}
+.thanks h2, .thanks p{
+    padding: 2em;
+}
+
+.thanks p{
+    color: white;
+}
+
+@media screen and (max-width: 535px) {
+    .thanks h2, .thanks p{
+        padding: 0.8em;
+    }
+}
